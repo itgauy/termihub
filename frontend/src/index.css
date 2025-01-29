@@ -1,1 +1,30 @@
 @import "tailwindcss";
+
+body {
+  @apply font-mono text-xs;
+}
+
+/* Button Pulse */
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-pulse {
+  animation: blink 1.5s ease-in-out infinite;
+}
+
+.animate-pulse:hover {
+  animation: none;
+}
+
+i {
+  @apply text-black invisible;
+}
